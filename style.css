@@ -41,6 +41,7 @@ body {
   box-shadow: 0 10px 24px rgba(49, 46, 129, 0.2);
   z-index: 1000;
   margin-top: 0;
+  color: red;
 }
 
 .brand {
