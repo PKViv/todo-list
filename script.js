@@ -98,6 +98,18 @@ function toggleTask(taskId) {
 }
 
 function deleteTask(taskId) {
+  const item = todoList.querySelector(`.todo-item[data-id="${taskId}"]`);
+
+  if (item) {
+    item.classList.add('removing');
+    setTimeout(() => {
+      tasks = tasks.filter((task) => task.id !== taskId);
+      saveTasks();
+      renderTasks();
+    }, 180);
+    return;
+  }
+
   tasks = tasks.filter((task) => task.id !== taskId);
   saveTasks();
   renderTasks();
