@@ -28,22 +28,25 @@ body {
 }
 
 .navbar {
+  position: sticky;
+  top: 0;
   width: min(92vw, 560px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(229, 231, 235, 0.9);
+  background: linear-gradient(135deg, #4f46e5 0%, #312e81 100%);
+  border: 1px solid rgba(79, 70, 229, 0.3);
   border-radius: 16px 16px 0 0;
   padding: 14px 18px;
-  box-shadow: 0 -8px 24px rgba(79, 70, 229, 0.05);
+  box-shadow: 0 10px 24px rgba(49, 46, 129, 0.2);
+  z-index: 1000;
+  margin-top: 0;
 }
 
 .brand {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary-dark);
+  color: #ffffff;
 }
 
 .nav-links {
@@ -52,14 +55,14 @@ body {
 }
 
 .nav-links a {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: var(--primary);
+  color: #ffffff;
 }
 
 button,
@@ -70,9 +73,10 @@ input {
 .app {
   width: min(92vw, 560px);
   background: var(--panel);
-  border-radius: 18px;
+  border-radius: 0 0 18px 18px;
   box-shadow: var(--shadow);
   padding: 28px 22px 20px;
+  margin-top: 0;
 }
 
 .header {
